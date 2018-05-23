@@ -1,0 +1,10 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\bin\Debug\Namen.exe.config
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\bin\Debug\Namen.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\bin\Debug\Namen.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.Form1.resources
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.exe
+C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.pdb
