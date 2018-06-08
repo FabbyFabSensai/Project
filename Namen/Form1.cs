@@ -19,7 +19,7 @@ namespace Namen
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)

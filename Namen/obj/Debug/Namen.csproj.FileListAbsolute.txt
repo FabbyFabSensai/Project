@@ -8,3 +8,13 @@ C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.
 C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.exe
 C:\Users\user\Documents\Visual Studio 2017\Projects\Namen\Namen\obj\Debug\Namen.pdb
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.csprojAssemblyReference.cache
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.Form1.resources
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.cache
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.exe
+C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
+C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.exe.config
+C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.exe
+C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.pdb
