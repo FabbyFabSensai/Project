@@ -18,3 +18,12 @@ C:\Users\fabia\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
 C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.exe.config
 C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.exe
 C:\Users\fabia\Source\Repos\Project\Namen\bin\Debug\Namen.pdb
+C:\Users\user\Source\Repos\Project\Namen\bin\Debug\Namen.exe.config
+C:\Users\user\Source\Repos\Project\Namen\bin\Debug\Namen.exe
+C:\Users\user\Source\Repos\Project\Namen\bin\Debug\Namen.pdb
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.Form1.resources
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.exe
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.pdb

@@ -51,5 +51,59 @@ namespace Namen
         {
 
         }
+
+        private void bestaetigenButton_Click(object sender, EventArgs e)
+        {
+            bool pruefungBezirke = false;
+            bool pruefungGeschlechter = false;
+            var buttons = districtBox.Controls.OfType<RadioButton>();
+            var geschlechter = genderBox.Controls.OfType<CheckBox>();
+            var bezirk = "";
+            foreach ( RadioButton pruefButton in buttons)
+            {
+                if (pruefButton.Checked) {
+                    pruefungBezirke = true;
+                    bezirk = pruefButton.Text;
+                } 
+                
+                    
+                
+            }
+            foreach (CheckBox pruefBox in geschlechter)
+            {
+                if(pruefBox.Checked)
+                {
+                    pruefungGeschlechter = true;
+                } 
+                
+                   
+                
+            }
+            if (pruefungBezirke == false) MessageBox.Show("Bitte wählen Sie einen Bezirk aus");
+            if (pruefungGeschlechter == false) MessageBox.Show("Bitte wählen Sie mindestens ein Geschlecht aus");
+            if (pruefungBezirke == true && pruefungGeschlechter == true)
+            {
+                bezirkLabel.Text = bezirk;
+                if (femaleCheckbox.Checked && maleCheckbox.Checked)
+                {
+                    namenLabel.Text = "Alle Namen";
+                }
+                else if (femaleCheckbox.Checked)
+                {
+                    namenLabel.Text = "Mädchennamen";
+                }
+                else namenLabel.Text = "Jungennamen";           
+            }
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bezirkLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
