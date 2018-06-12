@@ -117,10 +117,10 @@
             this.treptowButton.AutoSize = true;
             this.treptowButton.Location = new System.Drawing.Point(7, 356);
             this.treptowButton.Name = "treptowButton";
-            this.treptowButton.Size = new System.Drawing.Size(140, 21);
+            this.treptowButton.Size = new System.Drawing.Size(148, 21);
             this.treptowButton.TabIndex = 12;
             this.treptowButton.TabStop = true;
-            this.treptowButton.Text = "Treptow-Köpenick";
+            this.treptowButton.Text = "Treptow-Koepenick";
             this.treptowButton.UseVisualStyleBackColor = true;
             // 
             // tempelhofButton
@@ -128,10 +128,10 @@
             this.tempelhofButton.AutoSize = true;
             this.tempelhofButton.Location = new System.Drawing.Point(7, 328);
             this.tempelhofButton.Name = "tempelhofButton";
-            this.tempelhofButton.Size = new System.Drawing.Size(175, 21);
+            this.tempelhofButton.Size = new System.Drawing.Size(183, 21);
             this.tempelhofButton.TabIndex = 11;
             this.tempelhofButton.TabStop = true;
-            this.tempelhofButton.Text = "Tempelhof-Schöneberg";
+            this.tempelhofButton.Text = "Tempelhof-Schoeneberg";
             this.tempelhofButton.UseVisualStyleBackColor = true;
             // 
             // steglitzButton

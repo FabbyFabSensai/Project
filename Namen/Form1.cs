@@ -84,7 +84,7 @@ namespace Namen
                     string eintrag="";
                     foreach (string eintraege in Program.GetNamensliste(bezirk.ToLower(), "a"))
                     {
-                        eintrag = eintrag + eintraege+ "/n" ;
+                        eintrag = eintrag + eintraege+ "\n" ;
                     }
                     namenslisteLabel.Text = eintrag;
                 }

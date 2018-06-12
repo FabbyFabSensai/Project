@@ -15,24 +15,16 @@ namespace Namen
         [STAThread]
         static void Main()
         {
-            
-
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-
         }
 
         public static string[] GetNamensliste(string bezirk, string geschlecht)
         {
             CSVLoader daten = new CSVLoader();
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");
-            MessageBox.Show(data.ToString());
-            MessageBox.Show(path + "\\csv_data\\" + bezirk + ".csv");
+            string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");      
             string[] eintraege = new string[data.Length];
             if (geschlecht == "m" || geschlecht == "w")
             {
@@ -46,7 +38,7 @@ namespace Namen
             }
             if (geschlecht == "a")
             {
-                for (int i = 1; i <= data.Length - 1; i++)
+                for (int i = 1; i <= data.Length-1; i++)
                 {
                     eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
                 }

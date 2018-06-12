@@ -27,3 +27,13 @@ C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.re
 C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
 C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.exe
 C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
+C:\Users\Tom\Source\Repos\Project\Namen\bin\Debug\Namen.exe.config
+C:\Users\Tom\Source\Repos\Project\Namen\bin\Debug\Namen.exe
+C:\Users\Tom\Source\Repos\Project\Namen\bin\Debug\Namen.pdb
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.csprojAssemblyReference.cache
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.Form1.resources
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.cache
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.exe
+C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
