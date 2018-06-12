@@ -18,7 +18,10 @@ namespace Namen
     /// string[][] data = test.readCSV(path + "\\csv_data\\mitte.csv");
     ///        for(int i = 1; i <= data.Length-1; i++)
     ///      {
-    ///        Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+    ///        if (data[i][2] = m)
+    ///        {
+    ///             Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+    ///        }
     ///      }
     /// </summary>
 class CSVLoader
@@ -45,7 +48,5 @@ class CSVLoader
 
             
         }
-
-
     }
 }
