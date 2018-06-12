@@ -65,19 +65,13 @@ namespace Namen
                     pruefungBezirke = true;
                     bezirk = pruefButton.Text;
                 } 
-                
-                    
-                
             }
             foreach (CheckBox pruefBox in geschlechter)
             {
                 if(pruefBox.Checked)
                 {
                     pruefungGeschlechter = true;
-                } 
-                
-                   
-                
+                }   
             }
             if (pruefungBezirke == false) MessageBox.Show("Bitte wählen Sie einen Bezirk aus");
             if (pruefungGeschlechter == false) MessageBox.Show("Bitte wählen Sie mindestens ein Geschlecht aus");
@@ -87,6 +81,12 @@ namespace Namen
                 if (femaleCheckbox.Checked && maleCheckbox.Checked)
                 {
                     namenLabel.Text = "Alle Namen";
+                    string eintrag="";
+                    foreach (string eintraege in Program.GetNamensliste(bezirk.ToLower(), "a"))
+                    {
+                        eintrag = eintrag + eintraege+ "/n" ;
+                    }
+                    namenslisteLabel.Text = eintrag;
                 }
                 else if (femaleCheckbox.Checked)
                 {
@@ -95,6 +95,8 @@ namespace Namen
                 else namenLabel.Text = "Jungennamen";           
             }
         }
+
+
         //test
         private void label1_Click_2(object sender, EventArgs e)
         {

@@ -53,10 +53,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.namenLabel = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.GroupBox();
+            this.namenslisteLabel = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.graphBox = new System.Windows.Forms.GroupBox();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
-            this.namenslisteLabel = new System.Windows.Forms.Label();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
@@ -183,10 +183,10 @@
             this.neukoellnButton.AutoSize = true;
             this.neukoellnButton.Location = new System.Drawing.Point(7, 190);
             this.neukoellnButton.Name = "neukoellnButton";
-            this.neukoellnButton.Size = new System.Drawing.Size(81, 21);
+            this.neukoellnButton.Size = new System.Drawing.Size(89, 21);
             this.neukoellnButton.TabIndex = 6;
             this.neukoellnButton.TabStop = true;
-            this.neukoellnButton.Text = "Neukölln";
+            this.neukoellnButton.Text = "Neukoelln";
             this.neukoellnButton.UseVisualStyleBackColor = true;
             // 
             // mitteButton
@@ -358,6 +358,14 @@
             this.listBox.TabStop = false;
             this.listBox.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // namenslisteLabel
+            // 
+            this.namenslisteLabel.AutoSize = true;
+            this.namenslisteLabel.Location = new System.Drawing.Point(7, 20);
+            this.namenslisteLabel.Name = "namenslisteLabel";
+            this.namenslisteLabel.Size = new System.Drawing.Size(0, 13);
+            this.namenslisteLabel.TabIndex = 1;
+            // 
             // vScrollBar1
             // 
             this.vScrollBar1.Location = new System.Drawing.Point(993, 16);
@@ -380,14 +388,6 @@
             this.vScrollBar2.Name = "vScrollBar2";
             this.vScrollBar2.Size = new System.Drawing.Size(17, 297);
             this.vScrollBar2.TabIndex = 0;
-            // 
-            // namenslisteLabel
-            // 
-            this.namenslisteLabel.AutoSize = true;
-            this.namenslisteLabel.Location = new System.Drawing.Point(7, 20);
-            this.namenslisteLabel.Name = "namenslisteLabel";
-            this.namenslisteLabel.Size = new System.Drawing.Size(0, 13);
-            this.namenslisteLabel.TabIndex = 1;
             // 
             // Form1
             // 

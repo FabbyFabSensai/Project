@@ -31,20 +31,26 @@ namespace Namen
             CSVLoader daten = new CSVLoader();
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");
+            MessageBox.Show(data.ToString());
+            MessageBox.Show(path + "\\csv_data\\" + bezirk + ".csv");
             string[] eintraege = new string[data.Length];
             if (geschlecht == "m" || geschlecht == "w")
-                for(int i = 1; i <= data.Length-1; i++)
-                 {
+            {
+                for (int i = 1; i <= data.Length - 1; i++)
+                {
                     if (data[i][2] == geschlecht)
                     {
                         eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
                     }
-                 }
+                }
+            }
             if (geschlecht == "a")
+            {
                 for (int i = 1; i <= data.Length - 1; i++)
                 {
-                        eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+                    eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
                 }
+            }
             return eintraege;
         }
 
