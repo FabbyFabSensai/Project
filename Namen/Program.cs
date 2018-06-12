@@ -26,25 +26,26 @@ namespace Namen
 
         }
 
-        public static void GetNamesliste(string bezirk, string geschlecht)
+        public static string[] GetNamensliste(string bezirk, string geschlecht)
         {
-            CSVLoader test = new CSVLoader();
+            CSVLoader daten = new CSVLoader();
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string[][] data = test.readCSV(path + "\\csv_data\\" + bezirk +".csv");
-
+            string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");
+            string[] eintraege = new string[data.Length];
             if (geschlecht == "m" || geschlecht == "w")
                 for(int i = 1; i <= data.Length-1; i++)
                  {
                     if (data[i][2] == geschlecht)
                     {
-                        Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+                        eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
                     }
                  }
             if (geschlecht == "a")
                 for (int i = 1; i <= data.Length - 1; i++)
                 {
-                        Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+                        eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
                 }
+            return eintraege;
         }
 
     }
