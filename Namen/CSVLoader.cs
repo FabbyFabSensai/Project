@@ -11,16 +11,16 @@ namespace Namen
 
 
     /// <summary>
-    /// Beispiel zum verwenden des XML Loaders, um alle Daten aus der Mitte.csv Datei auszulesen, wobei i für die Zeile in der Datei steht(wir müssen nicht mit 0 Anfangen zuzählen, da das nur die Spalten beschreibung in der CSV-Datei darstellt) 
-    /// und der index danach den werd des Feldes darstellt,  0--> name, 1-->Anzahl;2-->geschlecht, 3 --> position  
-    //CSVLoader test = new CSVLoader();
-    //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-    //  string[][] data = test.readCSV(path + "\\csv_data\\mitte.csv");
-    //        for(int i = 1; i<= data.Length-1; i++)
-    //      {
-    //        Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
-          //  }
-/// </summary>
+    /// Beispiel zum Verwenden des XML Loaders, um alle Daten aus der Mitte.csv Datei auszulesen, wobei i für die Zeile in der Datei steht(wir müssen nicht bei 0 anfangen zu zählen, da das nur die Spaltenbeschreibung in der CSV-Datei darstellt) 
+    /// und der Index danach den Wert des Feldes darstellt,  0--> Name, 1--> Anzahl, 2--> Geschlecht, 3 --> Position  
+    /// CSVLoader test = new CSVLoader();
+    /// string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+    /// string[][] data = test.readCSV(path + "\\csv_data\\mitte.csv");
+    ///        for(int i = 1; i <= data.Length-1; i++)
+    ///      {
+    ///        Console.WriteLine(data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+    ///      }
+    /// </summary>
 class CSVLoader
     {
         public string[][] readCSV(string path)
