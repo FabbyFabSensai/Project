@@ -46,5 +46,10 @@ namespace Namen
         {
 
         }
+
+        private void maleCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
