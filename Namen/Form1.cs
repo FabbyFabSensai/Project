@@ -92,9 +92,16 @@ namespace Namen
                 {
                     namenLabel.Text = "Jungennamen";
                     richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
+                    string diagramm = "";
+                    foreach (string eintrag in Program.GetNamensliste(bezirk.ToLower(), "m"))
+                    {
+                        diagramm += "<div style='background-color=blue; width="+eintrag[1]+"'>"+eintrag[0]+"</div>"+"\n";
+                    }
+        
+                    diagramBox.Text = System.Net.WebUtility.HtmlDecode(diagramm);
                 }
             }
-            chart1.
+            
         }
 
 
@@ -115,6 +122,11 @@ namespace Namen
         }
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

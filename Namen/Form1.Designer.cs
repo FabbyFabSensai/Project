@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuBox = new System.Windows.Forms.GroupBox();
             this.bestaetigenButton = new System.Windows.Forms.Button();
             this.districtBox = new System.Windows.Forms.GroupBox();
@@ -56,16 +53,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.namenLabel = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.GroupBox();
-            this.graphBox = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graphBox = new System.Windows.Forms.GroupBox();
+            this.diagramBox = new System.Windows.Forms.RichTextBox();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
             this.headlineBox.SuspendLayout();
             this.listBox.SuspendLayout();
             this.graphBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBox
@@ -360,15 +356,6 @@
             this.listBox.TabStop = false;
             this.listBox.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // graphBox
-            // 
-            this.graphBox.Controls.Add(this.chart1);
-            this.graphBox.Location = new System.Drawing.Point(241, 385);
-            this.graphBox.Name = "graphBox";
-            this.graphBox.Size = new System.Drawing.Size(1013, 316);
-            this.graphBox.TabIndex = 3;
-            this.graphBox.TabStop = false;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(6, 12);
@@ -377,25 +364,22 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // chart1
+            // graphBox
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(7, 19);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1000, 291);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.graphBox.Controls.Add(this.diagramBox);
+            this.graphBox.Location = new System.Drawing.Point(241, 385);
+            this.graphBox.Name = "graphBox";
+            this.graphBox.Size = new System.Drawing.Size(1013, 316);
+            this.graphBox.TabIndex = 3;
+            this.graphBox.TabStop = false;
+            // 
+            // diagramBox
+            // 
+            this.diagramBox.Location = new System.Drawing.Point(6, 13);
+            this.diagramBox.Name = "diagramBox";
+            this.diagramBox.Size = new System.Drawing.Size(1001, 297);
+            this.diagramBox.TabIndex = 0;
+            this.diagramBox.Text = "";
             // 
             // Form1
             // 
@@ -409,6 +393,7 @@
             this.Controls.Add(this.menuBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuBox.ResumeLayout(false);
             this.menuBox.PerformLayout();
             this.districtBox.ResumeLayout(false);
@@ -419,7 +404,6 @@
             this.headlineBox.PerformLayout();
             this.listBox.ResumeLayout(false);
             this.graphBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,7 +437,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label bezirkLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.RichTextBox diagramBox;
     }
 }
 
