@@ -94,7 +94,6 @@ namespace Namen
                     richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
                 }
             }
-            chart1.
         }
 
 
