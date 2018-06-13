@@ -37,3 +37,4 @@ C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.
 C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache
 C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.exe
 C:\Users\Tom\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
+C:\Users\user\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.CoreCompileInputs.cache

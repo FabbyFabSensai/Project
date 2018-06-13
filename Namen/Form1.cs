@@ -81,18 +81,18 @@ namespace Namen
                 if (femaleCheckbox.Checked && maleCheckbox.Checked)
                 {
                     namenLabel.Text = "Alle Namen";
-                    string eintrag="";
-                    foreach (string eintraege in Program.GetNamensliste(bezirk.ToLower(), "a"))
-                    {
-                        eintrag = eintrag + eintraege+ "\n" ;
-                    }
-                    namenslisteLabel.Text = eintrag;
+                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
                 }
                 else if (femaleCheckbox.Checked)
                 {
                     namenLabel.Text = "Mädchennamen";
+                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
                 }
-                else namenLabel.Text = "Jungennamen";           
+                else
+                {
+                    namenLabel.Text = "Jungennamen";
+                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
+                }
             }
         }
 

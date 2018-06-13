@@ -53,10 +53,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.namenLabel = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.GroupBox();
-            this.namenslisteLabel = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.graphBox = new System.Windows.Forms.GroupBox();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
@@ -349,29 +348,13 @@
             // 
             // listBox
             // 
-            this.listBox.Controls.Add(this.namenslisteLabel);
-            this.listBox.Controls.Add(this.vScrollBar1);
+            this.listBox.Controls.Add(this.richTextBox1);
             this.listBox.Location = new System.Drawing.Point(241, 103);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(1013, 276);
             this.listBox.TabIndex = 2;
             this.listBox.TabStop = false;
             this.listBox.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // namenslisteLabel
-            // 
-            this.namenslisteLabel.AutoSize = true;
-            this.namenslisteLabel.Location = new System.Drawing.Point(7, 20);
-            this.namenslisteLabel.Name = "namenslisteLabel";
-            this.namenslisteLabel.Size = new System.Drawing.Size(0, 13);
-            this.namenslisteLabel.TabIndex = 1;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(993, 16);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 257);
-            this.vScrollBar1.TabIndex = 0;
             // 
             // graphBox
             // 
@@ -388,6 +371,14 @@
             this.vScrollBar2.Name = "vScrollBar2";
             this.vScrollBar2.Size = new System.Drawing.Size(17, 297);
             this.vScrollBar2.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(6, 12);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1001, 258);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -410,7 +401,6 @@
             this.headlineBox.ResumeLayout(false);
             this.headlineBox.PerformLayout();
             this.listBox.ResumeLayout(false);
-            this.listBox.PerformLayout();
             this.graphBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -421,7 +411,6 @@
         private System.Windows.Forms.GroupBox menuBox;
         private System.Windows.Forms.GroupBox headlineBox;
         private System.Windows.Forms.GroupBox listBox;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.GroupBox graphBox;
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.Label menuLabel;
@@ -446,7 +435,7 @@
         private System.Windows.Forms.Label namenLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label bezirkLabel;
-        private System.Windows.Forms.Label namenslisteLabel;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
