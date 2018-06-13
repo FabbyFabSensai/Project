@@ -25,26 +25,45 @@ namespace Namen
             CSVLoader daten = new CSVLoader();
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");
-            int mwZaehler = 0;
+            int mwZaehler = 3;
             string[] eintraege;
             foreach(string[] listeneintrag in data)
             {
-                if (listeneintrag[2] == geschlecht) mwZaehler++;
+                if (listeneintrag[2] == geschlecht)
+                {
+                    mwZaehler++;
+                }
+
             }
             if (geschlecht == "m" || geschlecht == "w")
             {
                 eintraege = new string[mwZaehler];
             }
             else eintraege = new string[data.Length];
-            int zaehler = 0;
+            int zaehler = 1;
             if (geschlecht == "m" || geschlecht == "w")
             {
                 for (int i = 1; i <= data.Length - 1; i++)
                 {
                     if (data[i][2] == geschlecht)
                     {
-                        eintraege[zaehler] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
-                        zaehler++;
+                        if (data[i][3] == "1")
+                        {
+                            eintraege[zaehler] = ("1" + data[i][0] + " Anzahl: " + data[i][1]);
+                            zaehler++;
+                        }
+
+                        if (data[i][3] == "2")
+                        {
+                            eintraege[zaehler] = ("2" + data[i][0] + " Anzahl: " + data[i][1]);
+                            zaehler++;
+                        }
+
+                        if (data[i][3] == "3")
+                        {
+                            eintraege[zaehler] = ("3" + data[i][0] + " Anzahl: " + data[i][1]);
+                            zaehler++;
+                        }
                     }
                 }
             }
@@ -52,7 +71,23 @@ namespace Namen
             {
                 for (int i = 1; i <= data.Length-1; i++)
                 {
-                    eintraege[i] = (data[i][0] + " " + data[i][1] + " " + data[i][2] + " " + data[i][3]);
+                    if (data[i][3] == "1")
+                    {
+                        eintraege[zaehler] = ("1" + data[i][0] + " Anzahl: " + data[i][1]);
+                        zaehler++;
+                    }
+
+                    if (data[i][3] == "2")
+                    {
+                        eintraege[zaehler] = ("2" + data[i][0] + " Anzahl: " + data[i][1]);
+                        zaehler++;
+                    }
+
+                    if (data[i][3] == "3")
+                    {
+                        eintraege[zaehler] = ("3" + data[i][0] + " Anzahl: " + data[i][1]);
+                        zaehler++;
+                    }
                 }
             }
             return eintraege;
