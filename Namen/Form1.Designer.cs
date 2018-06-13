@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuBox = new System.Windows.Forms.GroupBox();
             this.bestaetigenButton = new System.Windows.Forms.Button();
             this.districtBox = new System.Windows.Forms.GroupBox();
@@ -54,14 +57,15 @@
             this.namenLabel = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.GroupBox();
             this.graphBox = new System.Windows.Forms.GroupBox();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
             this.headlineBox.SuspendLayout();
             this.listBox.SuspendLayout();
             this.graphBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBox
@@ -358,19 +362,12 @@
             // 
             // graphBox
             // 
-            this.graphBox.Controls.Add(this.vScrollBar2);
+            this.graphBox.Controls.Add(this.chart1);
             this.graphBox.Location = new System.Drawing.Point(241, 385);
             this.graphBox.Name = "graphBox";
             this.graphBox.Size = new System.Drawing.Size(1013, 316);
             this.graphBox.TabIndex = 3;
             this.graphBox.TabStop = false;
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(993, 16);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(17, 297);
-            this.vScrollBar2.TabIndex = 0;
             // 
             // richTextBox1
             // 
@@ -379,6 +376,26 @@
             this.richTextBox1.Size = new System.Drawing.Size(1001, 258);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(7, 19);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1000, 291);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
@@ -402,6 +419,7 @@
             this.headlineBox.PerformLayout();
             this.listBox.ResumeLayout(false);
             this.graphBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,7 +430,6 @@
         private System.Windows.Forms.GroupBox headlineBox;
         private System.Windows.Forms.GroupBox listBox;
         private System.Windows.Forms.GroupBox graphBox;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.Label menuLabel;
         private System.Windows.Forms.GroupBox genderBox;
         private System.Windows.Forms.CheckBox femaleCheckbox;
@@ -436,6 +453,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label bezirkLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
