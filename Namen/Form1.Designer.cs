@@ -72,9 +72,9 @@
             this.menuBox.Controls.Add(this.genderBox);
             this.menuBox.Controls.Add(this.menuLabel);
             this.menuBox.Location = new System.Drawing.Point(16, 15);
-            this.menuBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuBox.Margin = new System.Windows.Forms.Padding(4);
             this.menuBox.Name = "menuBox";
-            this.menuBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuBox.Padding = new System.Windows.Forms.Padding(4);
             this.menuBox.Size = new System.Drawing.Size(297, 848);
             this.menuBox.TabIndex = 0;
             this.menuBox.TabStop = false;
@@ -84,7 +84,7 @@
             // 
             this.bestaetigenButton.BackColor = System.Drawing.SystemColors.Control;
             this.bestaetigenButton.Location = new System.Drawing.Point(103, 658);
-            this.bestaetigenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bestaetigenButton.Margin = new System.Windows.Forms.Padding(4);
             this.bestaetigenButton.Name = "bestaetigenButton";
             this.bestaetigenButton.Size = new System.Drawing.Size(187, 46);
             this.bestaetigenButton.TabIndex = 3;
@@ -109,9 +109,9 @@
             this.districtBox.Controls.Add(this.berlinButton);
             this.districtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.districtBox.Location = new System.Drawing.Point(8, 164);
-            this.districtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.districtBox.Margin = new System.Windows.Forms.Padding(4);
             this.districtBox.Name = "districtBox";
-            this.districtBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.districtBox.Padding = new System.Windows.Forms.Padding(4);
             this.districtBox.Size = new System.Drawing.Size(281, 487);
             this.districtBox.TabIndex = 2;
             this.districtBox.TabStop = false;
@@ -120,7 +120,7 @@
             // 
             this.treptowButton.AutoSize = true;
             this.treptowButton.Location = new System.Drawing.Point(9, 438);
-            this.treptowButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treptowButton.Margin = new System.Windows.Forms.Padding(4);
             this.treptowButton.Name = "treptowButton";
             this.treptowButton.Size = new System.Drawing.Size(173, 24);
             this.treptowButton.TabIndex = 12;
@@ -132,7 +132,7 @@
             // 
             this.tempelhofButton.AutoSize = true;
             this.tempelhofButton.Location = new System.Drawing.Point(9, 404);
-            this.tempelhofButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tempelhofButton.Margin = new System.Windows.Forms.Padding(4);
             this.tempelhofButton.Name = "tempelhofButton";
             this.tempelhofButton.Size = new System.Drawing.Size(212, 24);
             this.tempelhofButton.TabIndex = 11;
@@ -144,7 +144,7 @@
             // 
             this.steglitzButton.AutoSize = true;
             this.steglitzButton.Location = new System.Drawing.Point(9, 369);
-            this.steglitzButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.steglitzButton.Margin = new System.Windows.Forms.Padding(4);
             this.steglitzButton.Name = "steglitzButton";
             this.steglitzButton.Size = new System.Drawing.Size(170, 24);
             this.steglitzButton.TabIndex = 10;
@@ -156,7 +156,7 @@
             // 
             this.spandauButton.AutoSize = true;
             this.spandauButton.Location = new System.Drawing.Point(9, 336);
-            this.spandauButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spandauButton.Margin = new System.Windows.Forms.Padding(4);
             this.spandauButton.Name = "spandauButton";
             this.spandauButton.Size = new System.Drawing.Size(95, 24);
             this.spandauButton.TabIndex = 9;
@@ -168,7 +168,7 @@
             // 
             this.reinickendorfButton.AutoSize = true;
             this.reinickendorfButton.Location = new System.Drawing.Point(9, 303);
-            this.reinickendorfButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reinickendorfButton.Margin = new System.Windows.Forms.Padding(4);
             this.reinickendorfButton.Name = "reinickendorfButton";
             this.reinickendorfButton.Size = new System.Drawing.Size(132, 24);
             this.reinickendorfButton.TabIndex = 8;
@@ -180,7 +180,7 @@
             // 
             this.pankowButton.AutoSize = true;
             this.pankowButton.Location = new System.Drawing.Point(9, 268);
-            this.pankowButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pankowButton.Margin = new System.Windows.Forms.Padding(4);
             this.pankowButton.Name = "pankowButton";
             this.pankowButton.Size = new System.Drawing.Size(88, 24);
             this.pankowButton.TabIndex = 7;
@@ -192,7 +192,7 @@
             // 
             this.neukoellnButton.AutoSize = true;
             this.neukoellnButton.Location = new System.Drawing.Point(9, 234);
-            this.neukoellnButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.neukoellnButton.Margin = new System.Windows.Forms.Padding(4);
             this.neukoellnButton.Name = "neukoellnButton";
             this.neukoellnButton.Size = new System.Drawing.Size(103, 24);
             this.neukoellnButton.TabIndex = 6;
@@ -204,7 +204,7 @@
             // 
             this.mitteButton.AutoSize = true;
             this.mitteButton.Location = new System.Drawing.Point(9, 199);
-            this.mitteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mitteButton.Margin = new System.Windows.Forms.Padding(4);
             this.mitteButton.Name = "mitteButton";
             this.mitteButton.Size = new System.Drawing.Size(67, 24);
             this.mitteButton.TabIndex = 5;
@@ -216,7 +216,7 @@
             // 
             this.marzahnButton.AutoSize = true;
             this.marzahnButton.Location = new System.Drawing.Point(9, 165);
-            this.marzahnButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marzahnButton.Margin = new System.Windows.Forms.Padding(4);
             this.marzahnButton.Name = "marzahnButton";
             this.marzahnButton.Size = new System.Drawing.Size(184, 24);
             this.marzahnButton.TabIndex = 4;
@@ -228,7 +228,7 @@
             // 
             this.lichtenbergButton.AutoSize = true;
             this.lichtenbergButton.Location = new System.Drawing.Point(9, 130);
-            this.lichtenbergButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lichtenbergButton.Margin = new System.Windows.Forms.Padding(4);
             this.lichtenbergButton.Name = "lichtenbergButton";
             this.lichtenbergButton.Size = new System.Drawing.Size(118, 24);
             this.lichtenbergButton.TabIndex = 3;
@@ -240,7 +240,7 @@
             // 
             this.friedrichshainButton.AutoSize = true;
             this.friedrichshainButton.Location = new System.Drawing.Point(9, 96);
-            this.friedrichshainButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.friedrichshainButton.Margin = new System.Windows.Forms.Padding(4);
             this.friedrichshainButton.Name = "friedrichshainButton";
             this.friedrichshainButton.Size = new System.Drawing.Size(219, 24);
             this.friedrichshainButton.TabIndex = 2;
@@ -252,7 +252,7 @@
             // 
             this.charlottenburgButton.AutoSize = true;
             this.charlottenburgButton.Location = new System.Drawing.Point(8, 62);
-            this.charlottenburgButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.charlottenburgButton.Margin = new System.Windows.Forms.Padding(4);
             this.charlottenburgButton.Name = "charlottenburgButton";
             this.charlottenburgButton.Size = new System.Drawing.Size(237, 24);
             this.charlottenburgButton.TabIndex = 1;
@@ -265,7 +265,7 @@
             this.berlinButton.AutoSize = true;
             this.berlinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.berlinButton.Location = new System.Drawing.Point(8, 27);
-            this.berlinButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.berlinButton.Margin = new System.Windows.Forms.Padding(4);
             this.berlinButton.Name = "berlinButton";
             this.berlinButton.Size = new System.Drawing.Size(161, 28);
             this.berlinButton.TabIndex = 0;
@@ -278,9 +278,9 @@
             this.genderBox.Controls.Add(this.femaleCheckbox);
             this.genderBox.Controls.Add(this.maleCheckbox);
             this.genderBox.Location = new System.Drawing.Point(8, 54);
-            this.genderBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genderBox.Margin = new System.Windows.Forms.Padding(4);
             this.genderBox.Name = "genderBox";
-            this.genderBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genderBox.Padding = new System.Windows.Forms.Padding(4);
             this.genderBox.Size = new System.Drawing.Size(281, 91);
             this.genderBox.TabIndex = 1;
             this.genderBox.TabStop = false;
@@ -290,7 +290,7 @@
             this.femaleCheckbox.AutoSize = true;
             this.femaleCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femaleCheckbox.Location = new System.Drawing.Point(9, 54);
-            this.femaleCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.femaleCheckbox.Margin = new System.Windows.Forms.Padding(4);
             this.femaleCheckbox.Name = "femaleCheckbox";
             this.femaleCheckbox.Size = new System.Drawing.Size(100, 26);
             this.femaleCheckbox.TabIndex = 1;
@@ -302,7 +302,7 @@
             this.maleCheckbox.AutoSize = true;
             this.maleCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maleCheckbox.Location = new System.Drawing.Point(9, 21);
-            this.maleCheckbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maleCheckbox.Margin = new System.Windows.Forms.Padding(4);
             this.maleCheckbox.Name = "maleCheckbox";
             this.maleCheckbox.Size = new System.Drawing.Size(103, 26);
             this.maleCheckbox.TabIndex = 0;
@@ -328,9 +328,9 @@
             this.headlineBox.Controls.Add(this.label2);
             this.headlineBox.Controls.Add(this.namenLabel);
             this.headlineBox.Location = new System.Drawing.Point(321, 15);
-            this.headlineBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headlineBox.Margin = new System.Windows.Forms.Padding(4);
             this.headlineBox.Name = "headlineBox";
-            this.headlineBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headlineBox.Padding = new System.Windows.Forms.Padding(4);
             this.headlineBox.Size = new System.Drawing.Size(1351, 105);
             this.headlineBox.TabIndex = 1;
             this.headlineBox.TabStop = false;
@@ -378,9 +378,9 @@
             // 
             this.listBox.Controls.Add(this.richTextBox1);
             this.listBox.Location = new System.Drawing.Point(321, 127);
-            this.listBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox.Margin = new System.Windows.Forms.Padding(4);
             this.listBox.Name = "listBox";
-            this.listBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox.Padding = new System.Windows.Forms.Padding(4);
             this.listBox.Size = new System.Drawing.Size(1351, 340);
             this.listBox.TabIndex = 2;
             this.listBox.TabStop = false;
@@ -388,8 +388,9 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox1.Location = new System.Drawing.Point(8, 15);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(1333, 317);
             this.richTextBox1.TabIndex = 2;
@@ -399,9 +400,9 @@
             // 
             this.graphBox.Controls.Add(this.diagramBox);
             this.graphBox.Location = new System.Drawing.Point(321, 474);
-            this.graphBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.graphBox.Margin = new System.Windows.Forms.Padding(4);
             this.graphBox.Name = "graphBox";
-            this.graphBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.graphBox.Padding = new System.Windows.Forms.Padding(4);
             this.graphBox.Size = new System.Drawing.Size(1351, 389);
             this.graphBox.TabIndex = 3;
             this.graphBox.TabStop = false;
@@ -409,7 +410,7 @@
             // diagramBox
             // 
             this.diagramBox.Location = new System.Drawing.Point(8, 16);
-            this.diagramBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.diagramBox.Margin = new System.Windows.Forms.Padding(4);
             this.diagramBox.Name = "diagramBox";
             this.diagramBox.Size = new System.Drawing.Size(1333, 365);
             this.diagramBox.TabIndex = 0;
@@ -426,7 +427,7 @@
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.headlineBox);
             this.Controls.Add(this.menuBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

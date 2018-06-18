@@ -52,26 +52,27 @@ namespace Namen
 
         }
 
-        private void bestaetigenButton_Click(object sender, EventArgs e)
+        public void bestaetigenButton_Click(object sender, EventArgs e)
         {
             bool pruefungBezirke = false;
             bool pruefungGeschlechter = false;
             var buttons = districtBox.Controls.OfType<RadioButton>();
             var geschlechter = genderBox.Controls.OfType<CheckBox>();
             var bezirk = "";
-            foreach ( RadioButton pruefButton in buttons)
+            foreach (RadioButton pruefButton in buttons)
             {
-                if (pruefButton.Checked) {
+                if (pruefButton.Checked)
+                {
                     pruefungBezirke = true;
                     bezirk = pruefButton.Text;
-                } 
+                }
             }
             foreach (CheckBox pruefBox in geschlechter)
             {
-                if(pruefBox.Checked)
+                if (pruefBox.Checked)
                 {
                     pruefungGeschlechter = true;
-                }   
+                }
             }
             if (pruefungBezirke == false) MessageBox.Show("Bitte wählen Sie einen Bezirk aus");
             if (pruefungGeschlechter == false) MessageBox.Show("Bitte wählen Sie mindestens ein Geschlecht aus");
@@ -82,23 +83,25 @@ namespace Namen
                 {
                     namenLabel.Text = "Alle Namen";
                     richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
+                    diagramBox.ZoomFactor = 2;
+                    diagramBox.Text = Program.Diagramm(bezirk, "a");
                 }
                 else if (femaleCheckbox.Checked)
                 {
                     namenLabel.Text = "Mädchennamen";
                     richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
+                    diagramBox.ZoomFactor = 2;
+                    diagramBox.Text = Program.Diagramm(bezirk, "w");
                 }
                 else
                 {
                     namenLabel.Text = "Jungennamen";
                     richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
+                    diagramBox.ZoomFactor = 2;
+                    diagramBox.Text = Program.Diagramm(bezirk, "m");
                 }
             }
-            
         }
-
-
-        //test
         private void label1_Click_2(object sender, EventArgs e)
         {
 
