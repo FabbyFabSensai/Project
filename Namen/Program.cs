@@ -17,9 +17,8 @@ namespace Namen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Namen());
         }
-        //public static Dictionary<int, Kind> kind = new Dictionary<int, Kind>();
 
         public static List<Kind> GetNamensliste(string bezirk)
         {

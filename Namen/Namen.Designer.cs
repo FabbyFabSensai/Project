@@ -1,6 +1,6 @@
 ﻿namespace Namen
 {
-    partial class Form1
+    partial class Namen
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -417,10 +417,12 @@
             this.diagramBox.Text = "";
             this.diagramBox.TextChanged += new System.EventHandler(this.diagramBox_TextChanged);
             // 
-            // Form1
+            // Namen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1688, 878);
             this.Controls.Add(this.graphBox);
@@ -428,8 +430,10 @@
             this.Controls.Add(this.headlineBox);
             this.Controls.Add(this.menuBox);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "Namen";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "Namen";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuBox.ResumeLayout(false);
             this.menuBox.PerformLayout();
