@@ -119,18 +119,18 @@ namespace Namen
                     {
                         diagramm += (char) 35;
                     }
-                    for (int a = Convert.ToInt32(kind.anzahl); a<=70 - Convert.ToInt32(kind.anzahl); a++ )
+                    for (int a = Convert.ToInt32(kind.anzahl); a<=90 - Convert.ToInt32(kind.anzahl); a++ )
                     {
                         diagramm += " ";
                     }
                     diagramm += "Name: " + kind.name + ", Anzahl: " + kind.anzahl +"\n";
-                } else
+                } else if (geschlecht=="a")
                 {
                     for (int i = 0; i < Convert.ToInt32(kind.anzahl); i++)
                     {
                         diagramm += (char)35;
                     }
-                    for (int a = Convert.ToInt32(kind.anzahl); a <= 70 - Convert.ToInt32(kind.anzahl); a++)
+                    for (int a = Convert.ToInt32(kind.anzahl); a <= 90 - Convert.ToInt32(kind.anzahl); a++)
                     {
                         diagramm += " ";
                     }

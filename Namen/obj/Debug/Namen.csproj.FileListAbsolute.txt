@@ -46,3 +46,12 @@ C:\Users\braditz_t1\Source\Repos\Project\Namen\obj\Debug\Namen.csprojResolveAsse
 C:\Users\braditz_t1\Source\Repos\Project\Namen\obj\Debug\Namen.Form1.resources
 C:\Users\braditz_t1\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.resources
 C:\Users\braditz_t1\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\bin\Debug\Namen.exe.config
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.exe
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.pdb
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\bin\Debug\Namen.exe
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\bin\Debug\Namen.pdb
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.csprojResolveAssemblyReference.cache
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.Form1.resources
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
