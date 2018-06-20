@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuBox = new System.Windows.Forms.GroupBox();
             this.bestaetigenButton = new System.Windows.Forms.Button();
             this.districtBox = new System.Windows.Forms.GroupBox();
@@ -55,13 +58,14 @@
             this.listBox = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.graphBox = new System.Windows.Forms.GroupBox();
-            this.diagramBox = new System.Windows.Forms.RichTextBox();
+            this.diagrammBox = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
             this.headlineBox.SuspendLayout();
             this.listBox.SuspendLayout();
             this.graphBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diagrammBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBox
@@ -398,7 +402,7 @@
             // 
             // graphBox
             // 
-            this.graphBox.Controls.Add(this.diagramBox);
+            this.graphBox.Controls.Add(this.diagrammBox);
             this.graphBox.Location = new System.Drawing.Point(321, 474);
             this.graphBox.Margin = new System.Windows.Forms.Padding(4);
             this.graphBox.Name = "graphBox";
@@ -406,16 +410,23 @@
             this.graphBox.Size = new System.Drawing.Size(1351, 389);
             this.graphBox.TabIndex = 3;
             this.graphBox.TabStop = false;
+            this.graphBox.Enter += new System.EventHandler(this.graphBox_Enter);
             // 
-            // diagramBox
+            // diagrammBox
             // 
-            this.diagramBox.Location = new System.Drawing.Point(8, 16);
-            this.diagramBox.Margin = new System.Windows.Forms.Padding(4);
-            this.diagramBox.Name = "diagramBox";
-            this.diagramBox.Size = new System.Drawing.Size(1333, 365);
-            this.diagramBox.TabIndex = 0;
-            this.diagramBox.Text = "";
-            this.diagramBox.TextChanged += new System.EventHandler(this.diagramBox_TextChanged);
+            chartArea1.Name = "ChartArea1";
+            this.diagrammBox.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.diagrammBox.Legends.Add(legend1);
+            this.diagrammBox.Location = new System.Drawing.Point(8, 22);
+            this.diagrammBox.Name = "diagrammBox";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.diagrammBox.Series.Add(series1);
+            this.diagrammBox.Size = new System.Drawing.Size(1333, 360);
+            this.diagrammBox.TabIndex = 0;
+            this.diagrammBox.Text = "chart1";
             // 
             // Namen
             // 
@@ -445,6 +456,7 @@
             this.headlineBox.PerformLayout();
             this.listBox.ResumeLayout(false);
             this.graphBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.diagrammBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,7 +490,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label bezirkLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox diagramBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart diagrammBox;
     }
 }
 

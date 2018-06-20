@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Namen
 {
@@ -137,6 +138,40 @@ namespace Namen
                 }
             }
             return diagramm;
+        }
+        /// <summary>
+        /// Gibt alle Mädchen in einem Bezirk als Liste zurück
+        /// </summary>
+        /// <param name="bezirk"></param>
+        /// <returns></returns>
+        public static List<Kind> getMaedchen(string bezirk)
+        {
+            List<Kind> kinder = new List<Kind>();
+            foreach(Kind kind in GetNamensliste(bezirk))
+            {
+                if (kind.geschlecht == "w")
+                {
+                    kinder.Add(kind);
+                }
+            }
+            return kinder;
+        }
+        /// <summary>
+        /// Gibt alle Jungen in einem Bezirk als Liste zurück
+        /// </summary>
+        /// <param name="bezirk"></param>
+        /// <returns></returns>
+        public static List<Kind> getJungen(string bezirk)
+        {
+            List<Kind> kinder = new List<Kind>();
+            foreach (Kind kind in GetNamensliste(bezirk))
+            {
+                if (kind.geschlecht == "m")
+                {
+                    kinder.Add(kind);
+                }
+            }
+            return kinder;
         }
     }
 }
