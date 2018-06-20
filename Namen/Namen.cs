@@ -16,6 +16,22 @@ namespace Namen
         public Namen()
         {
             InitializeComponent();
+
+            //leere Tabelle anzeigen
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "Name";
+            dataGridView1.Columns[1].Name = "Anzahl";
+            dataGridView1.Columns[2].Name = "Geschlecht";
+            dataGridView1.Columns[3].Name = "Position";
+
+            dataGridView1.Columns[0].DisplayIndex = 0;
+            dataGridView1.Columns[1].DisplayIndex = 1;
+            dataGridView1.Columns[2].DisplayIndex = 2;
+            dataGridView1.Columns[3].DisplayIndex = 3;
+            dataGridView1.Columns[0].Width = 251;
+            dataGridView1.Columns[1].Width = 251;
+            dataGridView1.Columns[2].Width = 251;
+            dataGridView1.Columns[3].Width = 251;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -60,12 +76,14 @@ namespace Namen
             var buttons = districtBox.Controls.OfType<RadioButton>();
             var geschlechter = genderBox.Controls.OfType<CheckBox>();
             var bezirk = "";
+
             foreach (RadioButton pruefButton in buttons)
             {
                 if (pruefButton.Checked)
                 {
                     pruefungBezirke = true;
                     bezirk = pruefButton.Text;
+                    
                 }
             }
             foreach (CheckBox pruefBox in geschlechter)
@@ -85,9 +103,10 @@ namespace Namen
                     if (femaleCheckbox.Checked && maleCheckbox.Checked)
                     {
                         namenLabel.Text = "Alle Namen";
-                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
+                        //richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
                         //diagramBox.ZoomFactor = 2;
                         //diagramBox.Text = Program.Diagramm(bezirk, "a");
+                        fillTable(true, true, bezirk);
                     }
                     else if (femaleCheckbox.Checked)
                     {
@@ -95,13 +114,15 @@ namespace Namen
                         string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
                         double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
                         int zaehler = 0;
+                        fillTable(true, false, bezirk);
+
                         foreach (Kind kind in Program.getMaedchen(bezirk))
                         {
                             xDaten[zaehler] = kind.name;
                             yDaten[zaehler] = Convert.ToDouble(kind.anzahl);
                             zaehler++;
                         }
-                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
+                        //richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
                         ChartArea area = new ChartArea("Chart");
                         diagrammBox.ChartAreas.Add(area);
                         Series balken = new Series();
@@ -115,9 +136,10 @@ namespace Namen
                     else
                     {
                         namenLabel.Text = "Jungennamen";
-                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
+                        // richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
                         //diagramBox.ZoomFactor = 2;
                         //diagramBox.Text = Program.Diagramm(bezirk, "m");
+                        fillTable(false, true, bezirk);
                     }
                 }
             }
@@ -156,5 +178,83 @@ namespace Namen
         {
 
         }
+
+        private void fillTable(bool isFemale, bool isMale, string bezirk)
+        {
+            //Tabelle leeren,Console.WriteLine(dataGridView1.RowCount);<-- zum debugen prüfen ob tabelle wirklich geleert worden ist
+            dataGridView1.Rows.Clear();
+           
+            Console.WriteLine(dataGridView1.RowCount);
+
+            if (isFemale && isMale)
+            {
+                List<Kind> girlsAndBoys = Program.getMaedchen(bezirk);
+                girlsAndBoys.AddRange(Program.getJungen(bezirk));
+                foreach (Kind kind in girlsAndBoys)
+                {
+                    String geschlecht = "";
+                    if (kind.geschlecht == "m")
+                    {
+                        geschlecht = "männlich";
+                    }
+                    else if (kind.geschlecht == "w")
+                    {
+                        geschlecht = "weiblich";
+                    }
+                    string[] row = { kind.name, kind.anzahl, geschlecht, kind.position + ". Name" };
+                    dataGridView1.Rows.Add(row);
+
+                }
+
+
+
+
+
+            }
+            else if (isFemale)
+            {
+                List<Kind> girls = Program.getMaedchen(bezirk);
+                foreach(Kind kind in girls)
+                {
+                    String geschlecht = "";
+                    if(kind.geschlecht == "m")
+                    {
+                        geschlecht = "männlich";
+                    } else if(kind.geschlecht == "w")
+                    {
+                        geschlecht = "weiblich";
+                    }
+                    string[] row = { kind.name, kind.anzahl, geschlecht, kind.position+". Name" };
+                    dataGridView1.Rows.Add(row);   
+
+                } 
+
+            }
+            else if (isMale)
+            {
+                List<Kind> boys = Program.getJungen(bezirk);
+                foreach (Kind kind in boys)
+                {
+                    String geschlecht = "";
+                    if (kind.geschlecht == "m")
+                    {
+                        geschlecht = "männlich";
+                    }
+                    else if (kind.geschlecht == "w")
+                    {
+                        geschlecht = "weiblich";
+                    }
+                    string[] row = { kind.name, kind.anzahl, geschlecht, kind.position + ". Name" };
+                    dataGridView1.Rows.Add(row);
+
+                }
+            }
+
+        }
+
+
+
+
+
     }
 }
