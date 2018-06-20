@@ -55,3 +55,12 @@ C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.csprojResolveAss
 C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.Properties.Resources.resources
 C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache
 C:\Users\braditz_t1\Source\Repos\Project2\Namen\obj\Debug\Namen.Namen.resources
+C:\Users\f.broescky\Source\Repos\Project\Namen\bin\Debug\Namen.exe.config
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.exe
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.pdb
+C:\Users\f.broescky\Source\Repos\Project\Namen\bin\Debug\Namen.exe
+C:\Users\f.broescky\Source\Repos\Project\Namen\bin\Debug\Namen.pdb
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.csprojResolveAssemblyReference.cache
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.Namen.resources
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.Properties.Resources.resources
+C:\Users\f.broescky\Source\Repos\Project\Namen\obj\Debug\Namen.csproj.GenerateResource.Cache

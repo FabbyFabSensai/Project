@@ -16,6 +16,8 @@ namespace Namen
         [STAThread]
         static void Main()
         {
+           
+            Console.WriteLine(getNewBornWholeBerlin());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Namen());
