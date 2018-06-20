@@ -175,5 +175,26 @@ namespace Namen
             }
             return kinder;
         }
+        public static int getNewBornWholeBerlin()
+        {
+            CSVLoader loader = new CSVLoader();
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            int mitte = loader.countNewBornInFile(path + "\\csv_data\\" + "mitte" + ".csv");
+            int charlottenburgWilmersdorf = loader.countNewBornInFile(path + "\\csv_data\\" + "charlottenburg-wilmersdorf" + ".csv");
+            int friedrichshainKreuzberg = loader.countNewBornInFile(path + "\\csv_data\\" + "friedrichshain-kreuzberg" + ".csv");
+            int lichtenberg = loader.countNewBornInFile(path + "\\csv_data\\" + "lichtenberg" + ".csv");
+            int marzahnHellersdorf = loader.countNewBornInFile(path + "\\csv_data\\" + "marzahn-hellersdorf" + ".csv");
+            int neukoelln = loader.countNewBornInFile(path + "\\csv_data\\" + "neukoelln" + ".csv");
+            int pankow = loader.countNewBornInFile(path + "\\csv_data\\" + "pankow" + ".csv");
+            int reinickendorf = loader.countNewBornInFile(path + "\\csv_data\\" + "reinickendorf" + ".csv");
+            int spandau = loader.countNewBornInFile(path + "\\csv_data\\" + "spandau" + ".csv");
+            int steglitzZehlendorf = loader.countNewBornInFile(path + "\\csv_data\\" + "steglitz-zehlendorf" + ".csv");
+            int tempelhofSchoeneberg = loader.countNewBornInFile(path + "\\csv_data\\" + "tempelhof-schoenebergf" + ".csv");
+            int treptowKoepenick = loader.countNewBornInFile(path + "\\csv_data\\" + "treptow-koepenick" + ".csv");
+            int result = mitte + charlottenburgWilmersdorf + friedrichshainKreuzberg + lichtenberg + marzahnHellersdorf + neukoelln + pankow + reinickendorf + spandau + steglitzZehlendorf + tempelhofSchoeneberg + treptowKoepenick;
+
+
+            return result;
+        }
     }
 }

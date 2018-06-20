@@ -80,42 +80,45 @@ namespace Namen
             if (pruefungBezirke == true && pruefungGeschlechter == true)
             {
                 bezirkLabel.Text = bezirk;
-                if (femaleCheckbox.Checked && maleCheckbox.Checked)
+                if (bezirk != "Gesamt Berlin")
                 {
-                    namenLabel.Text = "Alle Namen";
-                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
-                    //diagramBox.ZoomFactor = 2;
-                    //diagramBox.Text = Program.Diagramm(bezirk, "a");
-                }
-                else if (femaleCheckbox.Checked)
-                {
-                    namenLabel.Text = "Mädchennamen";
-                    string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
-                    double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
-                    int zaehler = 0;
-                    foreach (Kind kind in Program.getMaedchen(bezirk))
+                    if (femaleCheckbox.Checked && maleCheckbox.Checked)
                     {
-                        xDaten[zaehler] = kind.name;
-                        yDaten[zaehler] = Convert.ToDouble(kind.anzahl);
-                        zaehler++;
+                        namenLabel.Text = "Alle Namen";
+                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
+                        //diagramBox.ZoomFactor = 2;
+                        //diagramBox.Text = Program.Diagramm(bezirk, "a");
                     }
-                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
-                    ChartArea area = new ChartArea("Chart");
-                    diagrammBox.ChartAreas.Add(area);
-                    Series balken = new Series();
-                    balken.Points.DataBindXY(xDaten, yDaten);
-                    balken.Name = "Vornamen";
-                    balken.ChartType = SeriesChartType.Bar;
-                    balken.ChartArea = "Chart";
-                    diagrammBox.Series.Add(balken);
-                    this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                }
-                else
-                {
-                    namenLabel.Text = "Jungennamen";
-                    richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
-                    //diagramBox.ZoomFactor = 2;
-                    //diagramBox.Text = Program.Diagramm(bezirk, "m");
+                    else if (femaleCheckbox.Checked)
+                    {
+                        namenLabel.Text = "Mädchennamen";
+                        string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
+                        double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
+                        int zaehler = 0;
+                        foreach (Kind kind in Program.getMaedchen(bezirk))
+                        {
+                            xDaten[zaehler] = kind.name;
+                            yDaten[zaehler] = Convert.ToDouble(kind.anzahl);
+                            zaehler++;
+                        }
+                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
+                        ChartArea area = new ChartArea("Chart");
+                        diagrammBox.ChartAreas.Add(area);
+                        Series balken = new Series();
+                        balken.Points.DataBindXY(xDaten, yDaten);
+                        balken.Name = "Vornamen";
+                        balken.ChartType = SeriesChartType.Bar;
+                        balken.ChartArea = "Chart";
+                        diagrammBox.Series.Add(balken);
+                        this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                    }
+                    else
+                    {
+                        namenLabel.Text = "Jungennamen";
+                        richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
+                        //diagramBox.ZoomFactor = 2;
+                        //diagramBox.Text = Program.Diagramm(bezirk, "m");
+                    }
                 }
             }
         }
