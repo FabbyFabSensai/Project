@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuBox = new System.Windows.Forms.GroupBox();
             this.bestaetigenButton = new System.Windows.Forms.Button();
@@ -60,6 +58,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.graphBox = new System.Windows.Forms.GroupBox();
             this.diagrammBox = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
@@ -69,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.graphBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diagrammBox)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuBox
@@ -384,7 +384,7 @@
             // 
             // graphBox
             // 
-            this.graphBox.Controls.Add(this.diagrammBox);
+            this.graphBox.Controls.Add(this.panel2);
             this.graphBox.Location = new System.Drawing.Point(241, 385);
             this.graphBox.Name = "graphBox";
             this.graphBox.Size = new System.Drawing.Size(1013, 316);
@@ -394,20 +394,23 @@
             // 
             // diagrammBox
             // 
-            chartArea1.Name = "ChartArea1";
-            this.diagrammBox.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.diagrammBox.Legends.Add(legend1);
-            this.diagrammBox.Location = new System.Drawing.Point(6, 18);
-            this.diagrammBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diagrammBox.Location = new System.Drawing.Point(2, 2);
+            this.diagrammBox.Margin = new System.Windows.Forms.Padding(2);
             this.diagrammBox.Name = "diagrammBox";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.diagrammBox.Series.Add(series1);
-            this.diagrammBox.Size = new System.Drawing.Size(1000, 292);
+            this.diagrammBox.Size = new System.Drawing.Size(1006, 1006);
             this.diagrammBox.TabIndex = 0;
             this.diagrammBox.Text = "chart1";
+            this.diagrammBox.Click += new System.EventHandler(this.diagrammBox_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.diagrammBox);
+            this.panel2.Location = new System.Drawing.Point(0, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1013, 307);
+            this.panel2.TabIndex = 0;
             // 
             // Namen
             // 
@@ -439,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.graphBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.diagrammBox)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -474,6 +478,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart diagrammBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

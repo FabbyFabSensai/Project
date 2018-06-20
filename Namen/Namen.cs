@@ -69,6 +69,8 @@ namespace Namen
         {
             diagrammBox.ChartAreas.Clear();
             diagrammBox.Series.Clear();
+            area.AxisX.Interval = 1;
+            panel2.AutoScroll = true;
             bool pruefungBezirke = false;
             bool pruefungGeschlechter = false;
             var buttons = districtBox.Controls.OfType<RadioButton>();
@@ -111,24 +113,40 @@ namespace Namen
                         string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
                         double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
                         int zaehler = 0;
-                        foreach (Kind kind in Program.getMaedchen(bezirk))
+                        for (int i = Program.getMaedchen(bezirk).Count-1; i >= 0; i--)
                         {
-                            xDaten[zaehler] = kind.name;
-                            yDaten[zaehler] = Convert.ToDouble(kind.anzahl);
+                            xDaten[zaehler] = Program.getMaedchen(bezirk)[i].name;
+                            yDaten[zaehler] = Convert.ToDouble(Program.getMaedchen(bezirk)[i].anzahl);
                             zaehler++;
                         }
                         diagrammBox.ChartAreas.Add(area);
                         balken.Points.DataBindXY(xDaten, yDaten);
-                        balken["PixelPointWidth"] = "15";
+                        balken["PixelPointWidth"] = "8";
                         balken.ChartType = SeriesChartType.Bar;
                         balken.ChartArea = "Chart";
                         diagrammBox.Series.Add(balken);
+                        
                     }
                     //Ausgabe für Jungen
                     else
                     {
                         namenLabel.Text = "Jungennamen";
                         fillTable(false, true, bezirk);
+                        string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
+                        double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
+                        int zaehler = 0;
+                        for (int i = Program.getJungen(bezirk).Count - 1; i >= 0; i--)
+                        {
+                            xDaten[zaehler] = Program.getJungen(bezirk)[i].name;
+                            yDaten[zaehler] = Convert.ToDouble(Program.getJungen(bezirk)[i].anzahl);
+                            zaehler++;
+                        }
+                        diagrammBox.ChartAreas.Add(area);
+                        balken.Points.DataBindXY(xDaten, yDaten);
+                        balken["PixelPointWidth"] = "8";
+                        balken.ChartType = SeriesChartType.Bar;
+                        balken.ChartArea = "Chart";
+                        diagrammBox.Series.Add(balken);
                     }
                 }
             }
@@ -227,6 +245,11 @@ namespace Namen
                     dataGridView1.Rows.Add(row);
                 }
             }
+        }
+
+        private void diagrammBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
