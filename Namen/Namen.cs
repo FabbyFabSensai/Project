@@ -16,14 +16,12 @@ namespace Namen
         public Namen()
         {
             InitializeComponent();
-
             //leere Tabelle anzeigen
             dataGridView1.ColumnCount = 4;
             dataGridView1.Columns[0].Name = "Name";
             dataGridView1.Columns[1].Name = "Anzahl";
             dataGridView1.Columns[2].Name = "Geschlecht";
             dataGridView1.Columns[3].Name = "Position";
-
             dataGridView1.Columns[0].DisplayIndex = 0;
             dataGridView1.Columns[1].DisplayIndex = 1;
             dataGridView1.Columns[2].DisplayIndex = 2;
@@ -124,6 +122,7 @@ namespace Namen
                         }
                         diagrammBox.ChartAreas.Add(area);
                         balken.Points.DataBindXY(xDaten, yDaten);
+                        balken["PixelPointWidth"] = "15";
                         balken.ChartType = SeriesChartType.Bar;
                         balken.ChartArea = "Chart";
                         diagrammBox.Series.Add(balken);
