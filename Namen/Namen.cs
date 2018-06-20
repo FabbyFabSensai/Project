@@ -26,10 +26,7 @@ namespace Namen
             dataGridView1.Columns[1].DisplayIndex = 1;
             dataGridView1.Columns[2].DisplayIndex = 2;
             dataGridView1.Columns[3].DisplayIndex = 3;
-            dataGridView1.Columns[0].Width = 251;
-            dataGridView1.Columns[1].Width = 251;
-            dataGridView1.Columns[2].Width = 251;
-            dataGridView1.Columns[3].Width = 251;
+      
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
