@@ -48,5 +48,28 @@ class CSVLoader
 
             
         }
+        public  int countNewBornInFile(string path)
+        {
+
+            int originalLineCount = 0;
+            if (File.Exists(path))
+            {
+                string[][] data = readCSV(path);
+                for (int i = 1; i <= data.Length - 1; i++)
+                {
+                    int temp = Convert.ToInt32(data[i][1]);
+                    originalLineCount = originalLineCount + temp;
+                }
+
+            }
+            else
+            {
+                return 0;
+            }
+           
+            return originalLineCount;
+        }
+
+
     }
 }
