@@ -175,6 +175,10 @@ namespace Namen
             }
             return kinder;
         }
+        /// <summary>
+        /// Gibt die summe aller neugeborenen Kinder in Berlin zurück
+        /// </summary>
+        /// <returns></returns>
         public static int getNewBornWholeBerlin()
         {
             CSVLoader loader = CSVLoader.getInstance;
@@ -196,5 +200,8 @@ namespace Namen
 
             return result;
         }
+
+
+
     }
 }
