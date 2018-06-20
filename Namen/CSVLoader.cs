@@ -26,6 +26,22 @@ namespace Namen
     /// </summary>
 class CSVLoader
     {
+        private static CSVLoader instance = null;
+        //singelton implentation
+        public static CSVLoader getInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new CSVLoader();
+                }
+                return instance;
+            }
+        }
+
+
+
         public string[][] readCSV(string path)
         {
             if (File.Exists(path))

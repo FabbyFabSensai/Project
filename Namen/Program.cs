@@ -26,7 +26,7 @@ namespace Namen
         public static List<Kind> GetNamensliste(string bezirk)
         {
             List<Kind> kinder = new List<Kind>();
-            CSVLoader daten = new CSVLoader();
+            CSVLoader daten = CSVLoader.getInstance;
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string[][] data = daten.readCSV(path + "\\csv_data\\" + bezirk +".csv");
             foreach (string[] listeneintrag in data)
@@ -177,7 +177,7 @@ namespace Namen
         }
         public static int getNewBornWholeBerlin()
         {
-            CSVLoader loader = new CSVLoader();
+            CSVLoader loader = CSVLoader.getInstance;
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             int mitte = loader.countNewBornInFile(path + "\\csv_data\\" + "mitte" + ".csv");
             int charlottenburgWilmersdorf = loader.countNewBornInFile(path + "\\csv_data\\" + "charlottenburg-wilmersdorf" + ".csv");
