@@ -68,9 +68,12 @@ namespace Namen
         {
 
         }
-
+        ChartArea area = new ChartArea("Chart");
+        Series balken = new Series();
         public void bestaetigenButton_Click(object sender, EventArgs e)
         {
+            diagrammBox.ChartAreas.Clear();
+            diagrammBox.Series.Clear();
             bool pruefungBezirke = false;
             bool pruefungGeschlechter = false;
             var buttons = districtBox.Controls.OfType<RadioButton>();
@@ -83,7 +86,6 @@ namespace Namen
                 {
                     pruefungBezirke = true;
                     bezirk = pruefButton.Text;
-                    
                 }
             }
             foreach (CheckBox pruefBox in geschlechter)
@@ -100,45 +102,36 @@ namespace Namen
                 bezirkLabel.Text = bezirk;
                 if (bezirk != "Gesamt Berlin")
                 {
+                    //Ausgabe alle Kinder
                     if (femaleCheckbox.Checked && maleCheckbox.Checked)
                     {
                         namenLabel.Text = "Alle Namen";
-                        //richTextBox1.Text = Program.ausgabeNamen(bezirk, "a");
-                        //diagramBox.ZoomFactor = 2;
-                        //diagramBox.Text = Program.Diagramm(bezirk, "a");
                         fillTable(true, true, bezirk);
                     }
+                    //Ausgabe für Mädchen
                     else if (femaleCheckbox.Checked)
-                    {
+                    { 
+                        fillTable(true, false, bezirk);
                         namenLabel.Text = "Mädchennamen";
                         string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
                         double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
                         int zaehler = 0;
-                        fillTable(true, false, bezirk);
-
                         foreach (Kind kind in Program.getMaedchen(bezirk))
                         {
                             xDaten[zaehler] = kind.name;
                             yDaten[zaehler] = Convert.ToDouble(kind.anzahl);
                             zaehler++;
                         }
-                        //richTextBox1.Text = Program.ausgabeNamen(bezirk, "w");
-                        ChartArea area = new ChartArea("Chart");
                         diagrammBox.ChartAreas.Add(area);
-                        Series balken = new Series();
                         balken.Points.DataBindXY(xDaten, yDaten);
-                        balken.Name = "Vornamen";
                         balken.ChartType = SeriesChartType.Bar;
                         balken.ChartArea = "Chart";
                         diagrammBox.Series.Add(balken);
-                        this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                     }
+                    //Ausgabe für Jungen
                     else
                     {
                         namenLabel.Text = "Jungennamen";
-                        // richTextBox1.Text = Program.ausgabeNamen(bezirk, "m");
-                        //diagramBox.ZoomFactor = 2;
-                        //diagramBox.Text = Program.Diagramm(bezirk, "m");
                         fillTable(false, true, bezirk);
                     }
                 }
@@ -183,9 +176,7 @@ namespace Namen
         {
             //Tabelle leeren,Console.WriteLine(dataGridView1.RowCount);<-- zum debugen prüfen ob tabelle wirklich geleert worden ist
             dataGridView1.Rows.Clear();
-           
             Console.WriteLine(dataGridView1.RowCount);
-
             if (isFemale && isMale)
             {
                 List<Kind> girlsAndBoys = Program.getMaedchen(bezirk);
@@ -203,13 +194,7 @@ namespace Namen
                     }
                     string[] row = { kind.name, kind.anzahl, geschlecht, kind.position + ". Name" };
                     dataGridView1.Rows.Add(row);
-
                 }
-
-
-
-
-
             }
             else if (isFemale)
             {
@@ -226,9 +211,7 @@ namespace Namen
                     }
                     string[] row = { kind.name, kind.anzahl, geschlecht, kind.position+". Name" };
                     dataGridView1.Rows.Add(row);   
-
                 } 
-
             }
             else if (isMale)
             {
@@ -246,15 +229,8 @@ namespace Namen
                     }
                     string[] row = { kind.name, kind.anzahl, geschlecht, kind.position + ". Name" };
                     dataGridView1.Rows.Add(row);
-
                 }
             }
-
         }
-
-
-
-
-
     }
 }

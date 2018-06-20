@@ -22,7 +22,11 @@ namespace Namen
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Namen());
         }
-
+        /// <summary>
+        /// Liest Daten aus CSVs und gibt sie als Liste zurück
+        /// </summary>
+        /// <param name="bezirk"></param>
+        /// <returns></returns>
         public static List<Kind> GetNamensliste(string bezirk)
         {
             List<Kind> kinder = new List<Kind>();
@@ -176,7 +180,7 @@ namespace Namen
             return kinder;
         }
         /// <summary>
-        /// Gibt die summe aller neugeborenen Kinder in Berlin zurück
+        /// Gibt die Summe aller neugeborenen Kinder in Berlin zurück
         /// </summary>
         /// <returns></returns>
         public static int getNewBornWholeBerlin()
