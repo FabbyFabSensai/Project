@@ -26,7 +26,8 @@ namespace Namen
             dataGridView1.Columns[1].DisplayIndex = 1;
             dataGridView1.Columns[2].DisplayIndex = 2;
             dataGridView1.Columns[3].DisplayIndex = 3;
-      
+            gesamtLabel.Text = "In Berlin wurden letztes \n" + "Jahr " + Program.getNewBornWholeBerlin().ToString() + " Kinder geboren.";
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -194,7 +195,7 @@ namespace Namen
                 } else
                 {
                     dataGridView1.Rows.Clear();
-                    gesamtLabel.Text ="In Berlin wurden letztes \n"+"Jahr "+ Program.getNewBornWholeBerlin().ToString() + " Kinder geboren.";
+                    
                 }
             }
         }
@@ -295,6 +296,11 @@ namespace Namen
         }
 
         private void diagrammBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
         {
 
         }
