@@ -63,20 +63,25 @@ namespace Namen
         {
 
         }
+        //Initialisierung Diagrammelemente
         ChartArea area = new ChartArea("Chart");
-        Series balken = new Series();
+        Series mbalken = new Series();
+        Series jbalken = new Series();
         public void bestaetigenButton_Click(object sender, EventArgs e)
         {
+            //Leeren des Diagramms für Mehrfachaufrufe
             diagrammBox.ChartAreas.Clear();
             diagrammBox.Series.Clear();
             area.AxisX.Interval = 1;
             panel2.AutoScroll = true;
+            mbalken.Name = "Mädchen";
+            jbalken.Name = "Jungen";
             bool pruefungBezirke = false;
             bool pruefungGeschlechter = false;
             var buttons = districtBox.Controls.OfType<RadioButton>();
             var geschlechter = genderBox.Controls.OfType<CheckBox>();
             var bezirk = "";
-
+            //Prüfung ob ein Bezirk ausgewählt ist
             foreach (RadioButton pruefButton in buttons)
             {
                 if (pruefButton.Checked)
@@ -85,6 +90,7 @@ namespace Namen
                     bezirk = pruefButton.Text;
                 }
             }
+            //Pruefung ob mindestens ein Geschlecht ausgewählt ist
             foreach (CheckBox pruefBox in geschlechter)
             {
                 if (pruefBox.Checked)
@@ -104,6 +110,41 @@ namespace Namen
                     {
                         namenLabel.Text = "Alle Namen";
                         fillTable(true, true, bezirk);
+                        // Anfang Diagramm für beide Geschlechter
+                        string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
+                        double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
+                        string[] xDaten2 = new string[Program.getJungen(bezirk).Count()];
+                        double[] yDaten2 = new double[Program.getJungen(bezirk).Count()];
+                        int zaehler = 0;
+                        int zaehler2 = 0;
+                        //Füllung der MädchenSerie
+                        for (int i = Program.getMaedchen(bezirk).Count - 1; i >= 0; i--)
+                        {
+                            xDaten[zaehler] = Program.getMaedchen(bezirk)[i].name;
+                            yDaten[zaehler] = Convert.ToDouble(Program.getMaedchen(bezirk)[i].anzahl);
+                            zaehler++;
+                        }
+                        //Füllung der JungenSerie
+                        for (int i = Program.getJungen(bezirk).Count - 1; i >= 0; i--)
+                        {
+                            xDaten[zaehler2] = xDaten[zaehler2] + " / " + Program.getJungen(bezirk)[i].name;
+                            yDaten2[zaehler2] = Convert.ToDouble(Program.getJungen(bezirk)[i].anzahl);
+                            zaehler2++;
+                        }
+                        diagrammBox.ChartAreas.Add(area);
+                        mbalken.Points.DataBindXY(xDaten, yDaten);
+                        mbalken.Color = Color.PaleVioletRed;
+                        mbalken["PixelPointWidth"] = "8";
+                        mbalken.ChartType = SeriesChartType.Bar;
+                        mbalken.ChartArea = "Chart";
+                        jbalken.Points.DataBindXY(xDaten, yDaten2);
+                        jbalken.Color = Color.Blue;
+                        jbalken["PixelPointWidth"] = "8";
+                        jbalken.ChartType = SeriesChartType.Bar;
+                        jbalken.ChartArea = "Chart";
+                        diagrammBox.Series.Add(jbalken);
+                        diagrammBox.Series.Add(mbalken);
+                        // Ende Diagramm
                     }
                     //Ausgabe für Mädchen
                     else if (femaleCheckbox.Checked)
@@ -120,20 +161,20 @@ namespace Namen
                             zaehler++;
                         }
                         diagrammBox.ChartAreas.Add(area);
-                        balken.Points.DataBindXY(xDaten, yDaten);
-                        balken["PixelPointWidth"] = "8";
-                        balken.ChartType = SeriesChartType.Bar;
-                        balken.ChartArea = "Chart";
-                        diagrammBox.Series.Add(balken);
-                        
+                        mbalken.Points.DataBindXY(xDaten, yDaten);
+                        mbalken.Color = Color.PaleVioletRed;
+                        mbalken["PixelPointWidth"] = "8";
+                        mbalken.ChartType = SeriesChartType.Bar;
+                        mbalken.ChartArea = "Chart";
+                        diagrammBox.Series.Add(mbalken);
                     }
                     //Ausgabe für Jungen
                     else
                     {
                         namenLabel.Text = "Jungennamen";
                         fillTable(false, true, bezirk);
-                        string[] xDaten = new string[Program.getMaedchen(bezirk).Count()];
-                        double[] yDaten = new double[Program.getMaedchen(bezirk).Count()];
+                        string[] xDaten = new string[Program.getJungen(bezirk).Count()];
+                        double[] yDaten = new double[Program.getJungen(bezirk).Count()];
                         int zaehler = 0;
                         for (int i = Program.getJungen(bezirk).Count - 1; i >= 0; i--)
                         {
@@ -142,11 +183,12 @@ namespace Namen
                             zaehler++;
                         }
                         diagrammBox.ChartAreas.Add(area);
-                        balken.Points.DataBindXY(xDaten, yDaten);
-                        balken["PixelPointWidth"] = "8";
-                        balken.ChartType = SeriesChartType.Bar;
-                        balken.ChartArea = "Chart";
-                        diagrammBox.Series.Add(balken);
+                        jbalken.Points.DataBindXY(xDaten, yDaten);
+                        jbalken.Color = Color.Blue;
+                        jbalken["PixelPointWidth"] = "8";
+                        jbalken.ChartType = SeriesChartType.Bar;
+                        jbalken.ChartArea = "Chart";
+                        diagrammBox.Series.Add(jbalken);
                     }
                 }
             }
