@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuBox = new System.Windows.Forms.GroupBox();
             this.bestaetigenButton = new System.Windows.Forms.Button();
             this.districtBox = new System.Windows.Forms.GroupBox();
@@ -60,6 +60,7 @@
             this.graphBox = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.diagrammBox = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gesamtLabel = new System.Windows.Forms.Label();
             this.menuBox.SuspendLayout();
             this.districtBox.SuspendLayout();
             this.genderBox.SuspendLayout();
@@ -75,6 +76,7 @@
             // menuBox
             // 
             this.menuBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuBox.Controls.Add(this.gesamtLabel);
             this.menuBox.Controls.Add(this.bestaetigenButton);
             this.menuBox.Controls.Add(this.districtBox);
             this.menuBox.Controls.Add(this.genderBox);
@@ -438,18 +440,27 @@
             // 
             // diagrammBox
             // 
-            legend1.Name = "Legend1";
-            this.diagrammBox.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.diagrammBox.Legends.Add(legend4);
             this.diagrammBox.Location = new System.Drawing.Point(3, 2);
             this.diagrammBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.diagrammBox.Name = "diagrammBox";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.diagrammBox.Series.Add(series1);
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.diagrammBox.Series.Add(series4);
             this.diagrammBox.Size = new System.Drawing.Size(1341, 1238);
             this.diagrammBox.TabIndex = 0;
             this.diagrammBox.Text = "chart1";
             this.diagrammBox.Click += new System.EventHandler(this.diagrammBox_Click);
+            // 
+            // gesamtLabel
+            // 
+            this.gesamtLabel.AutoSize = true;
+            this.gesamtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gesamtLabel.Location = new System.Drawing.Point(10, 736);
+            this.gesamtLabel.Name = "gesamtLabel";
+            this.gesamtLabel.Size = new System.Drawing.Size(0, 24);
+            this.gesamtLabel.TabIndex = 4;
             // 
             // Namen
             // 
@@ -519,6 +530,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label gesamtLabel;
     }
 }
 

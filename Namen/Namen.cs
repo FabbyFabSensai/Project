@@ -105,6 +105,7 @@ namespace Namen
                 bezirkLabel.Text = bezirk;
                 if (bezirk != "Gesamt Berlin")
                 {
+                    gesamtLabel.Text = "";
                     //Ausgabe alle Kinder
                     if (femaleCheckbox.Checked && maleCheckbox.Checked)
                     {
@@ -190,6 +191,10 @@ namespace Namen
                         jbalken.ChartArea = "Chart";
                         diagrammBox.Series.Add(jbalken);
                     }
+                } else
+                {
+                    dataGridView1.Rows.Clear();
+                    gesamtLabel.Text ="In Berlin wurden letztes \n"+"Jahr "+ Program.getNewBornWholeBerlin().ToString() + " Kinder geboren.";
                 }
             }
         }
