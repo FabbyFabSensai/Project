@@ -202,6 +202,12 @@ namespace Namen
             int result = mitte + charlottenburgWilmersdorf + friedrichshainKreuzberg + lichtenberg + marzahnHellersdorf + neukoelln + pankow + reinickendorf + spandau + steglitzZehlendorf + tempelhofSchoeneberg + treptowKoepenick;
             return result;
         }
+        /// <summary>
+        /// Gibt die Anzahl der Kinder pro Bezirk und Geschlecht aus
+        /// </summary>
+        /// <param name="bezirk"></param>
+        /// <param name="geschlecht"></param>
+        /// <returns></returns>
         public static int getKidsDistrict(string bezirk, string geschlecht)
         {
             CSVLoader loader = CSVLoader.getInstance;

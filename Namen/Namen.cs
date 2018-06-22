@@ -198,7 +198,6 @@ namespace Namen
                 } else
                 {
                     dataGridView1.Rows.Clear();
-                    
                 }
             }
         }
