@@ -200,12 +200,28 @@ namespace Namen
             int tempelhofSchoeneberg = loader.countNewBornInFile(path + "\\csv_data\\" + "tempelhof-schoenebergf" + ".csv");
             int treptowKoepenick = loader.countNewBornInFile(path + "\\csv_data\\" + "treptow-koepenick" + ".csv");
             int result = mitte + charlottenburgWilmersdorf + friedrichshainKreuzberg + lichtenberg + marzahnHellersdorf + neukoelln + pankow + reinickendorf + spandau + steglitzZehlendorf + tempelhofSchoeneberg + treptowKoepenick;
-
-
             return result;
         }
-
-
-
+        public static int getKidsDistrict(string bezirk, string geschlecht)
+        {
+            CSVLoader loader = CSVLoader.getInstance;
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string[][] daten = loader.readCSV(path + "\\csv_data\\" + bezirk + ".csv");
+            int zaehler = 0;
+            foreach (string[] eintrag in daten)
+            {
+                if (geschlecht == "w" && eintrag[2]=="w")
+                {
+                    zaehler++;
+                } else if (geschlecht=="m" && eintrag[2]=="m")
+                {
+                    zaehler++;
+                } else if (geschlecht=="a")
+                {
+                    zaehler++;
+                }
+            }
+            return zaehler;
+        }
     }
 }

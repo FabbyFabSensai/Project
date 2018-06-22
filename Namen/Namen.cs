@@ -144,9 +144,10 @@ namespace Namen
                         jbalken["PixelPointWidth"] = "8";
                         jbalken.ChartType = SeriesChartType.Bar;
                         jbalken.ChartArea = "Chart";
-                        diagrammBox.Series.Add(jbalken);
                         diagrammBox.Series.Add(mbalken);
+                        diagrammBox.Series.Add(jbalken);
                         // Ende Diagramm
+                        gesamtLabel.Text = "In \n" + bezirk + "\n"+"wurden " + Program.getKidsDistrict(bezirk, "a") + "\n"+"Kinder geboren.";
                     }
                     //Ausgabe für Mädchen
                     else if (femaleCheckbox.Checked)
@@ -169,6 +170,7 @@ namespace Namen
                         mbalken.ChartType = SeriesChartType.Bar;
                         mbalken.ChartArea = "Chart";
                         diagrammBox.Series.Add(mbalken);
+                        gesamtLabel.Text = "In \n" + bezirk + "\n" + "wurden " + Program.getKidsDistrict(bezirk, "w") + "\n" + "Mädchen geboren.";
                     }
                     //Ausgabe für Jungen
                     else
@@ -191,6 +193,7 @@ namespace Namen
                         jbalken.ChartType = SeriesChartType.Bar;
                         jbalken.ChartArea = "Chart";
                         diagrammBox.Series.Add(jbalken);
+                        gesamtLabel.Text = "In \n" + bezirk + "\n" + "wurden " + Program.getKidsDistrict(bezirk, "m") + "\n" + "Jungen geboren.";
                     }
                 } else
                 {
@@ -233,7 +236,12 @@ namespace Namen
         {
 
         }
-
+        /// <summary>
+        /// Füllt die Tabelle im oberen Bereich mit den entsprechenden Daten
+        /// </summary>
+        /// <param name="isFemale"></param>
+        /// <param name="isMale"></param>
+        /// <param name="bezirk"></param>
         private void fillTable(bool isFemale, bool isMale, string bezirk)
         {
             //Tabelle leeren,Console.WriteLine(dataGridView1.RowCount);<-- zum debugen prüfen ob tabelle wirklich geleert worden ist
